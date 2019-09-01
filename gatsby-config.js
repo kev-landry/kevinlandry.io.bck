@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `Kevin Landry Blog`,
+    author: `Kevin Landry`,
+    description: `A tech blog where i talk about what i do everyday.`,
+    siteUrl: `https://kevinlandry.io`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `Siscka42`,
     },
   },
   plugins: [
@@ -63,7 +63,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/terminal-150x150.png`,
       },
     },
     `gatsby-plugin-offline`,

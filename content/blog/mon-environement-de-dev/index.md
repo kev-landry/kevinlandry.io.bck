@@ -3,7 +3,7 @@ title: "Environnement de développement"
 date: "2018-06-08"
 ---
 
-#### **Petite présentation de mon environnement de travail sur Windows.**
+**Petite présentation de mon environnement de travail sur Windows.**
 
 ### Terminal
 

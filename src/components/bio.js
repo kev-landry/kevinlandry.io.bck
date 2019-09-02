@@ -14,9 +14,9 @@ import { rhythm } from "../utils/typography"
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
-      avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+      avatar: file(absolutePath: { regex: "/profile-pic_2.jpg/" }) {
         childImageSharp {
-          fixed(width: 50, height: 50) {
+          fixed(width: 225, height: 180) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -46,19 +46,25 @@ const Bio = () => {
         style={{
           marginRight: rhythm(1 / 2),
           marginBottom: 0,
-          minWidth: 50,
+					width: rhythm(2.5),
+					height: rhythm(2.5),
           borderRadius: `100%`,
         }}
         imgStyle={{
-          borderRadius: `50%`,
+          borderRadius: `10%`,
         }}
       />
 			<div
 				style= {{
 					display: `flex`,
-					flexDirection: `column`
+					flexDirection: `column`,
+					justifyContent: `center`
 				}}>
-				<p>
+				<p
+					style= {{
+						marginBottom: 0
+					}}
+				>
 					Ecrit par 
 					{` `}
 					<a href={`https://twitter.com/${social.twitter}`}>
@@ -67,7 +73,13 @@ const Bio = () => {
 					{` `}
 					développeur web fullstack.
 				</p>
-				<p>J'écris plein de choses qui parle de code.</p>
+				<p
+					style= {{
+						marginBottom: 0
+					}}
+				>
+					J'écris plein de choses qui parle de code.
+				</p>
 			</div>
     </div>
   )

@@ -5,56 +5,39 @@ date: "2018-05-24"
 
 ## Mettre en valeur son code avec Prism.js
 
- 
-
 Après avoir essayé plusieurs plugins wordpress "code snippet", j'ai constaté que la plupart ne me convenaient pas, ou alors étaient outdated.
 
- 
-
 Comme je compte utiliser ces snippets tout au long de mes futurs articles, je me suis dis pourquoi ne pas assembler mon propre éditeur de snippet !
-
- 
 
 Exemple type de ce qu'on veut arriver à faire :
 
 ```css
 /* Code blocks */
 pre[class*="language-"] {
- padding: 1em;
- margin: .5em 0;
- overflow: auto;
- border-radius: 0.3em;
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  border-radius: 0.3em;
 }
-
 ```
 
- 
-
 A savoir qu'il est possible de tout simplement utiliser les balises `pre` et `code`, suivant votre thème, le résultat peut vous convenir. Il y a aussi des sites comme _[Github Gist](https://gist.github.com/)_ pour préformater son code comme ceci :
-
- 
 
 <script src="https://gist.github.com/kev-landry/8417101bc1650e4c2290590fc84b1aed.js"></script>
 
 L'inconvénient c'est qu'à force d'insérer tous ces liens javascripts les pages prennent de plus de temps à charger.
 
-* * *
+---
 
 Pour notre méthode nous utiliserons des librairies javascripts afin d'intégrer notre code. Il en existe plusieurs [highlight.js](https://highlightjs.org/), [rainbow](https://craig.is/making/rainbows), [google prettify](https://github.com/google/code-prettify) ou encore [prism.js](http://prismjs.com/).
 
 Personnellement j'utilise Prismjs avec son thème _okaidia._
 
- 
-
 Dans la partie [downloads](http://prismjs.com/download.html) vous pouvez customiser votre package avec au choix, langages, thèmes, plugins :
-
- 
 
 ![](http://kevinlandry.io/wp-content/uploads/2018/06/Prism_Download_Page.png)
 
-Une fois les deux fichiers prism.css et prism.js téléchargés, placez les dans le dossier de votre thème,  le chemin peut changer suivant votre config, pour ma part il se trouve dans: _`<wordpress>/wp-content/themes/<mon-thème>/assets`_et suivant leur extension soit dans le dossier js ou css.
-
- 
+Une fois les deux fichiers prism.css et prism.js téléchargés, placez les dans le dossier de votre thème,  le chemin peut changer suivant votre config, pour ma part il se trouve dans: \_`<wordpress>/wp-content/themes/<mon-thème>/assets`\_et suivant leur extension soit dans le dossier js ou css.
 
 On doit maintenant faire en sorte que notre wordpress charge ces deux fichiers, nous allons devoir créer une fonction php dans notre fichier "function.php" à la racine de notre thème.
 
@@ -67,10 +50,10 @@ Suivant [les exemples](https://developer.wordpress.org/themes/basics/including-c
 // Notre fonction qui nous sert à charger nos deux nouveau fichiers:
 function add_prism() {
 // On link notre prism.css
-wp_enqueue_style( 'prism_css', get_template_directory_uri(). '/assets/css/prism.css', array(), 
+wp_enqueue_style( 'prism_css', get_template_directory_uri(). '/assets/css/prism.css', array(),
 DEVKICK_VERSION, 'all' );
 // On link notre prism.js
-wp_enqueue_script( 'prism', get_template_directory_uri(). '/assets/js/prism.js', array(), 
+wp_enqueue_script( 'prism', get_template_directory_uri(). '/assets/js/prism.js', array(),
 DEVKICK_VERSION, true );
 }
 // Le call à notre fonction
@@ -85,21 +68,17 @@ Maintenant vous pouvez utiliser vos balises pre et code et la synthax se fera au
 Vous pouvez aussi vous amusez à changer le style de vos balise dans le prism.css, perso j'ai juste changé le border-radius et assombri le background-color :
 
 ```css
-
 /* Code blocks */
 pre[class*="language-"] {
-	padding: 1em;
-	margin: .5em 0;
-	overflow: auto;
-	border-radius: 0.1em; // de 0.3em ) 0.1em
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  border-radius: 0.1em; // de 0.3em ) 0.1em
 }
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background: #20201b;
+  background: #20201b;
 }
-
 ```
 
- 
-
-### Vous êtes maintenant paré pour mettre en valeur votre code dans vos articles sans dépendre de plugins ou de sites externes.
+### Vous êtes maintenant paré pour mettre en valeur votre code dans vos articles sans dépendre de plugins ou de sites externes

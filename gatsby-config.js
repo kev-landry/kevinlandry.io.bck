@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Kevin Landry Blog`,
+    title: `kevinlandry.io`,
     author: `Kevin Landry`,
     description: `A tech blog where i talk about what i do everyday.`,
     siteUrl: `https://kevinlandry.io`,
@@ -9,6 +9,7 @@ module.exports = {
     },
   },
   plugins: [
+		'gatsby-plugin-dark-mode',
     {
       resolve: `gatsby-source-filesystem`,
       options: {

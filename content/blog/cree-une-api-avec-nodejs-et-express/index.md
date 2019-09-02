@@ -3,9 +3,7 @@ title: "Créé une API avec NodeJS et Express"
 date: "2017-04-30"
 ---
 
-### Le but de ce projet est de créer une API qui va gérer différentes données météorologique capturées par un Node MCU. Pour cela j'utilise [NodeJS](https://nodejs.org/en/) et son mini framework [Express](http://expressjs.com/fr/).
-
- 
+### Le but de ce projet est de créer une API qui va gérer différentes données météorologique capturées par un Node MCU. Pour cela j'utilise [NodeJS](https://nodejs.org/en/) et son mini framework [Express](http://expressjs.com/fr/)
 
 Nous aurons besoin de plusieurs modules :
 
@@ -17,29 +15,21 @@ Nous aurons besoin de plusieurs modules :
 
 [Nodemon](https://www.npmjs.com/package/nodemon) petit utilitaire pratique pour relancer notre serveur à chaque modifications
 
- 
-
 Partons du principe que notre node MCU retourne des données au format `JSON`.
 
- 
-
 ```json
-
 {
-"temp":"25", //température
-"hum":"20"   //humidité 
-} 
-
+  "temp": "25", //température
+  "hum": "20" //humidité
+}
 ```
 
 Afin de récolter ces données nous utiliserons le modèle suivant comme vu dans la doc Express.
 
 ```javascript
-
-app.post('/node', function (request, response) {
- response.send('POST request to homepage');
- });
-
+app.post("/node", function(request, response) {
+  response.send("POST request to homepage")
+})
 ```
 
 A l'intérieur nous n'aurons plus qu'a faire notre script.
@@ -47,36 +37,39 @@ A l'intérieur nous n'aurons plus qu'a faire notre script.
 Pour cela je créé une classe `Donnees` dans laquelle je définis une méthode static qui servira à ajouter les data pointées sur la route _ip:8000/node._
 
 ```javascript
+class Donnees {
+// On utilisera ici des méthodes static donc commune entre toutes les instances de la classe "Donnees"
+    static insert(temp, hum, callback) {
+            connection.query('INSERT INTO donnees SET temp = ?, hum = ?, time_ = ?', [temp, hum, new Date()], (err, result) {
+                    if (err) throw err
 
+                    callback(result)
+    })
+}
 ```
 
 J'en profite pour y ajouter une date à l'aide du constructeur `new Date()`. De plus il est possible de rendre la requête mieux sécurisée; en regardant la doc de ce package il existe une méthode similaire aux requêtes préparées de PHP.
-
- 
 
 ### POST
 
 Maintenant que notre requête est faite il faut l'utiliser. Revenons à notre méthode Express `POST`. Il va maintenant falloir faire un appel de notre méthode insert dans la classe `Donnees` puis lui passer en paramètres nos data au format JSON.
 
- 
-
 Cela ce traduit par :
 
 ```typescript
 // --- Route /node reçoit des data du nodeMCU---
-app.post('/node/', (request, response) => {
-    console.log(request.body)
-    response.status(200) //Check status by nodeMCU
+app.post("/node/", (request, response) => {
+  console.log(request.body)
+  response.status(200) //Check status by nodeMCU
 
-    //Interaction avec la BDD on envoit les donnees du node --
-    let Donnees = require('./app/models/donnees')
-    Donnees.insert(request.body['temp'], request.body['hum'], function() { // Appel de la la méthode insert dans la class Donnes
-        console.log("envoie de donnees => DB") //checking logs
-    })
+  //Interaction avec la BDD on envoit les donnees du node --
+  let Donnees = require("./app/models/donnees")
+  Donnees.insert(request.body["temp"], request.body["hum"], function() {
+    // Appel de la la méthode insert dans la class Donnes
+    console.log("envoie de donnees => DB") //checking logs
+  })
 })
 ```
-
- 
 
 ### GET
 
@@ -84,18 +77,18 @@ De la même façon que nous avons utilisé POST avec l'objet app, on fait la mê
 
 J'ai créé plusieurs routes GET différentes, en fonction des besoins de l'utilisateur, ici, je n'en montrerai qu'une mais il est toujours possible de voir l'intégralité du projet sur mon GitHub.
 
-Nous avons donc ici une route dynamique qui enfonction de ce que l'utilisateur passe en paramètre retourne les _n_ dernières data_ :_
+Nous avons donc ici une route dynamique qui enfonction de ce que l'utilisateur passe en paramètre retourne les *n* dernières data* :*
 
 ```javascript
 //Choisir les derniers records en date:
-app.get('/meteo/data/lastrecords/:lastrecords', (request, response) => {
-    response.status(200)
+app.get("/meteo/data/lastrecords/:lastrecords", (request, response) => {
+  response.status(200)
 
-    var lastrecords = request.params.lastrecords
-    var Donnees = require('./app/models/donnees')
-    Donnees.lastRecord(lastrecords, function(data) {
-        return response.json(data)
-    })
+  var lastrecords = request.params.lastrecords
+  var Donnees = require("./app/models/donnees")
+  Donnees.lastRecord(lastrecords, function(data) {
+    return response.json(data)
+  })
 })
 ```
 
@@ -116,25 +109,19 @@ Ici `:lastrecords` fait référence à un nombre, si l'utilisateur veut les dix 
 
 `LIMIT` attend un nombre, on retrouve donc notre variable `lastrecords` qui servira à délimiter le nombre de champs en partant du dernier Id qui sera sélectionné.
 
- 
-
 ### Callback
 
 Vous avez du remarquer à plusieurs reprises l'utilisation d'une fonction dans un paramètre d'une autre fonction. C'est ce qu'on appelle un callback.
 
- 
-
 Revenons sur l'exemple lastrecords :
 
 ```javascript
-    Donnees.lastRecord(lastrecords, function(data) {
-        return response.json(data)
-    })
+Donnees.lastRecord(lastrecords, function(data) {
+  return response.json(data)
+})
 ```
 
 Ici le callback est une fonction anonyme qui prend en paramètre `data`. Elle va se charger de récupérer le résultat (data) de la query lastRecord et ensuite on retourne cette même data au format JSON.
-
- 
 
 ### Bonus
 
@@ -142,13 +129,7 @@ Il est possible de créer rapidement un template pour votre doc api avec [apidoc
 
 En exemple :
 
- 
-
-![](http://kevinlandry.io/wp-content/uploads/2018/06/scroll_doc25.gif)
-
- 
-
- 
+![documentation api généré par apidoc](./scroll_doc25.gif)
 
 ### Conclusion
 

@@ -3,17 +3,14 @@ title: "Créé une API avec NodeJS et Express"
 date: "2017-04-30"
 ---
 
-### Le but de ce projet est de créer une API qui va gérer différentes données météorologique capturées par un Node MCU. Pour cela j'utilise [NodeJS](https://nodejs.org/en/) et son mini framework [Express](http://expressjs.com/fr/)
+**Le but de ce projet est de créer une API qui va gérer différentes données météorologique capturées par un Node MCU. Pour cela j'utilise [NodeJS](https://nodejs.org/en/) et son mini framework [Express](http://expressjs.com/fr/)**
 
 Nous aurons besoin de plusieurs modules :
 
-[Express](http://expressjs.com/fr/) pour gérer la partie rooting
-
-[Mysql](https://www.npmjs.com/package/mysql) pour notre base de donnée
-
-[Body-parser](https://www.npmjs.com/package/body-parser) afin de formater nos données
-
-[Nodemon](https://www.npmjs.com/package/nodemon) petit utilitaire pratique pour relancer notre serveur à chaque modifications
+* [Express](http://expressjs.com/fr/) pour gérer la partie rooting
+* [Mysql](https://www.npmjs.com/package/mysql) pour notre base de donnée
+* [Body-parser](https://www.npmjs.com/package/body-parser) afin de formater nos données
+* [Nodemon](https://www.npmjs.com/package/nodemon) petit utilitaire pratique pour relancer notre serveur à chaque modifications
 
 Partons du principe que notre node MCU retourne des données au format `JSON`.
 

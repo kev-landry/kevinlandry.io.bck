@@ -3,7 +3,7 @@ title: "Liste d'alias"
 date: "2018-07-08"
 ---
 
-#### **Petite liste des différents alias que j'utilise de façon régulière, j'en ajouterai au fil du temps.**
+**Petite liste des différents alias que j'utilise de façon régulière, j'en ajouterai au fil du temps.**
 
 ```text
 // Shell

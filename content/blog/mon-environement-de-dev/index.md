@@ -5,13 +5,11 @@ date: "2018-06-08"
 
 #### **Petite présentation de mon environnement de travail sur Windows.**
 
- 
-
 ### Terminal
 
 J'utilise l'émulateur console [Cmder](http://cmder.net/) en tant que terminal.
 
-![](http://kevinlandry.io/wp-content/uploads/2018/07/cmder.png)
+![Terminal cmder](./cmder.png)
 
 Il réunit plusieurs fonctionnalités sympa et en plus est portable, on peut donc l'utiliser sur plusieurs machines sans problèmes afin de retrouver ses propres settings.
 
@@ -26,29 +24,29 @@ En plus de cela il est possible de le customiser de façon assez avancé pour en
 
 Sur ce dernier point concernant le CLI il y en a plusieurs à disposition, vous pouvez y accéder via `Settings -> Startup -> Tasks` :
 
-![](http://kevinlandry.io/wp-content/uploads/2018/07/ConEmu64_2018-07-07_16-22-23.png)
+![Options de configuration de cmder](./ConEmu64_2018-07-07_16-22-23.png)
 
 On y retrouve forcément cmder, mais aussi le shell de base de windows (à éviter), powershell, il est même possible de faire en sorte d'utiliser le bash de linux.
 
 En effet vous pouvez activer le mode développeur puis cochez **Sous-système Windows pour Linux** afin d'avoir accès à un des environnements linux disponible.
 
-![](http://kevinlandry.io/wp-content/uploads/2018/07/explorer_2018-07-07_16-58-12.png)
+![activer WSL2 sur windows 10](./explorer.png)
 
 Une fois coché redémarrez le pc pour terminer l'installation.
 
 Ensuite cliquez sur **Add/refresh default tasks** toujours dans l'onglet Tasks :
 
-![](http://kevinlandry.io/wp-content/uploads/2018/07/2018-07-07_16-24-07.png)
+![utiliser bash avec cmder](./cmder_add_bash.png)
 
 Cmder va se charger lui-même de trouver le bash.exe et d'en définir le chemin.
 
 Il ne reste plus qu'à sélectionner Bash dans l'onglet **Startup :**
 
-![](http://kevinlandry.io/wp-content/uploads/2018/07/2018-07-07_16-23-52.png)
+![Options de lancement de cmder](./cmder_bash_settings.png)
 
 Et voilà ! Vous pouvez dès à présent profiter de cet environnement sans avoir à passer par une machine virtuelle ou un boot. A noter qu'il existe pour le moment 5 distributions linux disponibles.
 
-![](http://kevinlandry.io/wp-content/uploads/2018/07/ConEmu64_2018-07-07_17-26-13.png)
+![cli cmder avec bash wsl](./cmder_bash_wsl.png)
 
 Cela termine la partie Cmder !
 
@@ -81,13 +79,13 @@ Plugins que j'utilise :
 
 ### Environnement serveur local
 
-J'utilise Laragon en attendant d'être capable de me créer mon propre compose sur Docker.
+En fonction du projet du moment soit j'utilise Laragon en attendant d'être capable de me créer mon propre environement sur Docker.
 
-Quelques fonctionnalités sympa avec Laragon :
+Quelques fonctionnaylités sympa avec Laragon :
 
 - Possibilité d'utiliser apache/nginx, mysql/mongoDB, php/nodejs
 - Création auto de pretty urls
-- [Création rapide de projets](https://laragon.org/docs/quick-create.html) suivant le framework/CMS (laravel, symfon, wordpress)
+- [Création rapide de projets](https://laragon.org/docs/quick-app.html) suivant le framework/CMS (laravel, symfon, wordpress)
 - Gère le SSL
 
-Le but étant de commencer tous mes nouveaux projets avec docker.
+Soit j'utilise WSL2 qui est maintenant possible d'utiliser sur w10 comme vu précédemment avec la configuration de cmder.

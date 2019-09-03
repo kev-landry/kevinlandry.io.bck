@@ -18,6 +18,7 @@ class Layout extends React.Component {
   }
 
   renderHeader() {
+		console.log('children layout ->', this.props);
     const { location, title } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     let header
@@ -68,7 +69,6 @@ class Layout extends React.Component {
 
   render() {
     const { children } = this.props
-
     return (
 			<div
 				style={{

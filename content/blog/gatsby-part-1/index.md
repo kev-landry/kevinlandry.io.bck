@@ -36,7 +36,7 @@ De plus, c'était pour moi l'occasion de me (re)mettre à React et raccrocher un
 
 Un autre point que je n'aime pas avec WP est son écosystème très renfermé et toutes ses fonctions spécifiques. Je le trouve trop lourd, son architecture de theme parent/enfant est un enfer lorsqu'on veut créer son propre thème avec son propre css custom. L'architecture de Gatsby orientée composant est beaucoup plus simple et logique.
 
-Enfin niveau sécurité, même si on est encore loin du rythme de découverte de nouvelle failles windows 10, Wordpress à son lot d'exploit liés à ses plugins, ses themes ou son main bundle. Avec gatsby, vu que tous nos fichier sont statiques et qu'il n'y a aucune base de donnée cela diminue grandement les potentiels failles.
+Enfin niveau sécurité, même si on est encore loin du rythme de découverte de nouvelle [failles windows](https://www.zdnet.com/article/new-windows-hack-warning-patch-intel-systems-now-to-block-swapgsattack-exploits/) 10, Wordpress à son lot d'exploit liés à ses plugins, ses themes ou son main bundle. Avec gatsby, vu que tous nos fichier sont statiques et qu'il n'y a aucune base de donnée cela diminue grandement les potentiels failles.
 
 À tout cela on peut ajouter d'autres choses sympa :
 

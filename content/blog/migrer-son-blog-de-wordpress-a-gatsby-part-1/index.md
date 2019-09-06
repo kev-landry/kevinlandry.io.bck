@@ -9,6 +9,7 @@ description: "Les avantages de Gatsby par rapport à Wordpress"
 Cet article comportera deux parties, la première, pourquoi je suis passé de l'un à l'autre, la seconde plus technique, mettre en place gatsby.
 
 J'ai depuis peu enfin décidé de me remettre à la rédaction d'article sur mon blog, que ce soit pour vous qui me lisez afin de vous aider à travers des tutos/articles ou de nouvelles connaissances, ou pour moi, histoire d'avoir un support de veille.
+
 Le but premier était donc de me débarasser de Wordpress, jamais été fan mais à l'époque c'est ce qu'on m'avait appris en cours et ça faisait le travail ; il était simple de créer du contenu sans vraiment avoir à écrire du code.
 Je me suis donc penché sur les différents SSG _(static site generator)_ du moment ; on a beaucoup le choix ([oui beaucoup](https://www.staticgen.com/)) mais dans ceux ayant le plus la côte on note :
 
@@ -16,7 +17,7 @@ Je me suis donc penché sur les différents SSG _(static site generator)_ du mom
 - [Jekill](https://jekyllrb.com/), vétéran parmis les SSG et un des plus utilisés, fait en ruby
 - [Vuepress](https://vuepress.vuejs.org/) tout jeune lui, qui utilise le FW [Vue](https://vuejs.org/)
 
-Au final, même si dans un premier temps j'ai penché sur Vuepress pour la simplicité de son framework, j'ai choisi [Gatsby](https://www.gatsbyjs.org/) parcqu'il est "magnifique".
+Au final, même si dans un premier Vuepress avait mes faveurs pour la simplicité de son framework, j'ai choisi [Gatsby](https://www.gatsbyjs.org/) parcqu'il est magnifique.
 
 ![The great Gatsby](./the_great_gatsby_.jpg)
 

@@ -48,4 +48,4 @@ Enfin niveau sécurité, même si on est encore loin du rythme de découverte de
 
 En fait la seule condition de vouloir rester sur Wordpress est le fait qu'il ne requiert à aucun moment de mettre les mains dans le code là où Gatsby demande un minimum de connaissance du framework React ainsi que GraphQL qui est une manière différente de faire des requêtes API que celle qu'on retrouve la plupart du temps REST.
 
-**Pour conclure il ne m'aura fallu qu'une après-midi pour setup mon nouveau blog et je vous explique la migration des articles WP, le setup du projet Gatsby ainsi que son hébergement via Netlify dans la partie 2 !**
+**Pour conclure il ne m'aura fallu qu'une après-midi pour setup mon nouveau blog et je vous explique la migration des articles WP, le setup du projet Gatsby ainsi que son hébergement via Netlify dans [la partie 2](/migrer-son-blog-de-wordpress-a-gatsby-part-2/) !**

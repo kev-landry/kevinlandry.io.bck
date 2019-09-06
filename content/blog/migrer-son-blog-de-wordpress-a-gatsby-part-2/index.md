@@ -6,7 +6,7 @@ description: "Mettre en place gatsby et netlify"
 
 ## Passer de Wordpress à Gatsby
 
-Comme dit dans la partie 1 de notre tuto, mettre en place gatsby est rapide et relativement simple, nous aborderons ces 3 étapes:
+Comme dit dans [la partie 1](/migrer-son-blog-de-wordpress-a-gatsby-part-1/) de ce tuto, mettre en place gatsby est rapide et relativement simple, nous aborderons ces 3 étapes:
 
 - Migration de notre fichier .xml wordpress
 - Mise en place de Gatsby

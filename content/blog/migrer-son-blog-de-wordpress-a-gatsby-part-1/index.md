@@ -1,14 +1,14 @@
 ---
-title: Passer son blog de Wordpress à Gatsby
+title: Migrer son blog de Wordpress à Gatsby - Part 1
 date: "2019-09-04"
-description: "Je vous parle de ma migration wordpress -> gatsby"
+description: "Les avantages de Gatsby par rapport à Wordpress"
 ---
 
 ## Passer de Wordpress à Gatsby
 
 Cet article comportera deux parties, la première, pourquoi je suis passé de l'un à l'autre, la seconde plus technique, mettre en place gatsby.
 
-J'ai depuis peu enfin décidé de me remettre à la rédaction d'article sur mon blog, que ce soit pour toi qui me lis afin de t'aider à travers des tutos/articles ou de nouvelles connaissances, ou pour moi, histoire d'avoir un support de veille.
+J'ai depuis peu enfin décidé de me remettre à la rédaction d'article sur mon blog, que ce soit pour vous qui me lisez afin de vous aider à travers des tutos/articles ou de nouvelles connaissances, ou pour moi, histoire d'avoir un support de veille.
 Le but premier était donc de me débarasser de Wordpress, jamais été fan mais à l'époque c'est ce qu'on m'avait appris en cours et ça faisait le travail ; il était simple de créer du contenu sans vraiment avoir à écrire du code.
 Je me suis donc penché sur les différents SSG _(static site generator)_ du moment ; on a beaucoup le choix ([oui beaucoup](https://www.staticgen.com/)) mais dans ceux ayant le plus la côte on note :
 
@@ -18,7 +18,7 @@ Je me suis donc penché sur les différents SSG _(static site generator)_ du mom
 
 Au final, même si dans un premier temps j'ai penché sur Vuepress pour la simplicité de son framework, j'ai choisi [Gatsby](https://www.gatsbyjs.org/) parcqu'il est "magnifique".
 
-![The great Gatsby](./the_great_gatsby.jpg)
+![The great Gatsby](./the_great_gatsby_.jpg)
 
 ### The great Gatsby
 
@@ -43,7 +43,7 @@ Enfin niveau sécurité, même si on est encore loin du rythme de découverte de
 - [Plein de plugins](https://www.gatsbyjs.org/plugins/) tout prêt
 - SPA (Single Page Application) qui suit le pattern [PRPL](https://www.gatsbyjs.org/docs/prpl-pattern/), aucun refresh n'est nécéssaire, les ressources necéssaires sont load une seule fois, les liens internes au site sont preload
 - Scalable - Voyez gatsby comme un module auquel on peut rattacher plein de services différents, un cms pour par ex un client qui ne va pas mettre les mains dans le code façon WP, un shop, un service tiers de paiement, etc
-- Pouvoir utiliser son contenu partout - En effet les articles sont de simples fichiers mardown .m dans un repo public git, je peux facilement les utiliser pour faire des slide par exemple, les partager de différentes manières ou encore si un jour je veux les migrer facilement pour une autre technologie que Gatsby c'est simple
+- Pouvoir utiliser son contenu partout - En effet les articles sont de simples fichiers mardown .md dans un repo public git, je peux facilement les utiliser pour faire des slide par exemple, les partager de différentes manières ou encore si un jour je veux les migrer facilement pour une autre technologie que Gatsby c'est simple
 
 En fait la seule condition de vouloir rester sur Wordpress est le fait qu'il ne requiert à aucun moment de mettre les mains dans le code là où Gatsby demande un minimum de connaissance du framework React ainsi que GraphQL qui est une manière différente de faire des requêtes API que celle qu'on retrouve la plupart du temps REST.
 

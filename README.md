@@ -17,6 +17,7 @@
 </h1>
 
 My personal blog. Forked from [Gatsby blog starter](https://github.com/gatsbyjs/gatsby-starter-blog). You can find how to setup this project here on [my blog](https://www.kevinlandry.io/migrer-son-blog-de-wordpress-a-gatsby-part-1/) (fr).
+Built with Gatsby & React, hosted via Netlify.
 
 ## 🧐 What's inside ?
 

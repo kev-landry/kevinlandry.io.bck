@@ -25,9 +25,10 @@ class Layout extends React.Component {
     if (location.pathname === rootPath) {
       return (
         <h1
+					className='brand'
           style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
+            // ...scale(1),
+            marginBottom: 0,
             marginTop: 0,
           }}
         >
@@ -97,7 +98,7 @@ class Layout extends React.Component {
           style={{
             display: "flex",
             justifyContent: "space-between",
-            alignItems: "center",
+            alignItems: "baseline",
             marginBottom: "2.625rem",
           }}
         >

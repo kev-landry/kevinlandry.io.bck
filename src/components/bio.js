@@ -43,12 +43,11 @@ const Bio = () => {
       <Image
         fixed={data.avatar.childImageSharp.fixed}
         alt={author}
+				className='avatar'
         style={{
           marginRight: rhythm(1 / 2),
           marginBottom: 0,
-					width: rhythm(2.5),
-					height: rhythm(2.5),
-          borderRadius: `100%`,
+          borderRadius: `50%`,
         }}
         imgStyle={{
           borderRadius: `10%`,
@@ -58,7 +57,7 @@ const Bio = () => {
 				style= {{
 					display: `flex`,
 					flexDirection: `column`,
-					justifyContent: `center`
+					justifyContent: `center`,
 				}}>
 				<p
 					style= {{
@@ -69,9 +68,11 @@ const Bio = () => {
 					{` `}
 					<a href={`https://twitter.com/${social.twitter}`}>
 						<strong>{author}</strong>
-					</a>,
+					</a>
+					{/* ,
 					{` `}
-					développeur web fullstack.
+					développeur web fullstack */}
+					.
 				</p>
 				<p
 					style= {{

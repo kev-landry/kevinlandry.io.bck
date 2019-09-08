@@ -1,6 +1,6 @@
 ---
 title: "Environnement de développement"
-description: "Petite présentation de mon environnement de travail sur Windows."
+description: "Petite présentation de mon environnement de travail sur Windows 10."
 date: "2018-06-08"
 ---
 

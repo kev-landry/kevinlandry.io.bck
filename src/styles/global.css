@@ -26,9 +26,26 @@ body.dark {
   --inlineCode-bg: hsl(222, 14%, 25%);
   --inlineCode-text: #e6e6e6;
 }
-
+.brand {
+	font-size: 3rem;
+}
+.avatar {
+	width: 5rem !important;
+	height: 5rem !important;
+	min-width: 5rem !important;
+	min-height: 5rem !important;
+}
 @media (max-width: 672px) {
   .gatsby-highlight {
     border-radius: 0;
   }
+  .brand {
+    font-size: 2rem;
+  }
+	.avatar {
+		width: 4rem !important;
+		height: 4rem !important;
+		min-width: 4rem !important;
+		min-height: 4rem !important;
+	}
 }

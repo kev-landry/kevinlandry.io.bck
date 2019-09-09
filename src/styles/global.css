@@ -49,3 +49,12 @@ body.dark {
 		min-height: 4rem !important;
 	}
 }
+
+.social-container {
+	display: flex;
+	margin: 0 auto;
+	justify-content: end;
+}
+.social-container a{
+	box-shadow: none;
+}

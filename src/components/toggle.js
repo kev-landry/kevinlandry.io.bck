@@ -190,7 +190,7 @@ export default class Toggle extends PureComponent {
           onBlur={this.handleBlur}
           className="react-toggle-screenreader-only"
           type="checkbox"
-          aria-label="Switch between Dark and Light mode"
+          aria-label="Switch entre le thème sombre ou clair"
         />
       </div>
     )

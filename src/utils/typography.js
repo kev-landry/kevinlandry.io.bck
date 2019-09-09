@@ -6,6 +6,9 @@ Wordpress2016.overrideThemeStyles = () => ({
 		a: {
     color: 'var(--textLink)',
 		},
+		path: {
+			stroke: 'var(--textLink)'
+		},
 		hr: {
 			background: 'var(--hr)',
 		},

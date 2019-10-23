@@ -5,6 +5,7 @@ import { rhythm, scale } from "../utils/typography"
 import Toggle from "../components/toggle"
 import sun from "../assets/sun.png"
 import moon from "../assets/moon.png"
+import Comments from "./comments"
 
 class Layout extends React.Component {
   state = {
@@ -140,6 +141,10 @@ class Layout extends React.Component {
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer> */}
+					<Comments
+            location={this.props.location}
+            comments={comments}
+          />
       </div>
 		</div>
     )

@@ -6,8 +6,6 @@
  */
 
 import React, { PureComponent } from "react"
-import { ThemeToggler } from "gatsby-plugin-dark-mode"
-import { rhythm } from "../utils/typography"
 import "../styles/toggle.css"
 
 // Copyright 2015-present Drifty Co.
@@ -17,17 +15,17 @@ function pointerCoord(event) {
   // get coordinates for either a mouse click
   // or a touch depending on the given event
   if (event) {
-    const changedTouches = event.changedTouches;
+    const changedTouches = event.changedTouches
     if (changedTouches && changedTouches.length > 0) {
-      const touch = changedTouches[0];
-      return { x: touch.clientX, y: touch.clientY };
+      const touch = changedTouches[0]
+      return { x: touch.clientX, y: touch.clientY }
     }
-    const pageX = event.pageX;
+    const pageX = event.pageX
     if (pageX !== undefined) {
-      return { x: pageX, y: event.pageY };
+      return { x: pageX, y: event.pageY }
     }
   }
-  return { x: 0, y: 0 };
+  return { x: 0, y: 0 }
 }
 
 export default class Toggle extends PureComponent {
@@ -165,6 +163,7 @@ export default class Toggle extends PureComponent {
     return (
       <div
         className={classes}
+        role="toggle"
         onClick={this.handleClick}
         onTouchStart={this.handleTouchStart}
         onTouchMove={this.handleTouchMove}
